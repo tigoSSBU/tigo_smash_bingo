@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tigo版 SSBUビンゴツール</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo">tigo版 SSBUビンゴツール</div>
+  <button class="gen-btn" style="width:auto;margin:0;padding:8px 16px;font-size:0.9rem;" onclick="openModal()">
+    カスタマイズ設定
+  </button>
+</header>
+
+<main>
+  <div class="bingo-row">
+    <div class="bingo-wrap">
+      <div class="bingo-title" id="title-a">チームA</div>
+      <div class="bingo-grid" id="bingo-a"></div>
+      <div class="bingo-count" id="bingo-count-a"></div>
+      <button class="gen-btn" onclick="generateBingo('a')">ビンゴを作る</button>
+      <div class="gen-count" id="gen-count-a">ビンゴ作成回数: <span class="count-num">0</span>回</div>
+      <div class="btn-row">
+        <button class="reset-btn" onclick="resetChecks('a')">チェックをリセット</button>
+        <button class="reset-btn" onclick="resetCount('a')">作成回数をリセット</button>
+      </div>
+    </div>
+
+    <div class="bingo-wrap">
+      <div class="bingo-title" id="title-b">チームB</div>
+      <div class="bingo-grid" id="bingo-b"></div>
+      <div class="bingo-count" id="bingo-count-b"></div>
+      <button class="gen-btn" onclick="generateBingo('b')">ビンゴを作る</button>
+      <div class="gen-count" id="gen-count-b">ビンゴ作成回数: <span class="count-num">0</span>回</div>
+      <div class="btn-row">
+        <button class="reset-btn" onclick="resetChecks('b')">チェックをリセット</button>
+        <button class="reset-btn" onclick="resetCount('b')">作成回数をリセット</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<hr class="section-divider">
+<section class="team-section">
+  <h2>チーム分け</h2>
+  <div class="team-input-area">
+    <div id="player-inputs" style="display:flex;flex-wrap:wrap;gap:10px;">
+      <div class="player-input-group">
+        <label>プレイヤー 1</label>
+        <input type="text" id="player-1" placeholder="名前を入力" maxlength="20">
+      </div>
+      <div class="player-input-group">
+        <label>プレイヤー 2</label>
+        <input type="text" id="player-2" placeholder="名前を入力" maxlength="20">
+      </div>
+      <div class="player-input-group">
+        <label>プレイヤー 3</label>
+        <input type="text" id="player-3" placeholder="名前を入力" maxlength="20">
+      </div>
+      <div class="player-input-group">
+        <label>プレイヤー 4</label>
+        <input type="text" id="player-4" placeholder="名前を入力" maxlength="20">
+      </div>
+    </div>
+    <button class="add-player-btn" onclick="addPlayerField()">+ 追加</button>
+    <button class="team-divide-btn" onclick="divideTeams()">チーム分け</button>
+  </div>
+  <div class="team-result" id="team-result"></div>
+</section>
+
+<footer>@szk_saj</footer>
+
+<div class="modal-overlay" id="modal-overlay" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>カスタマイズ設定</h2>
+      <button class="modal-close" onclick="closeModal()">×</button>
+    </div>
+
+    <div class="section-label">含めるファイタータイプ</div>
+    <div class="checkbox-group">
+      <label class="custom-checkbox">
+        <input type="checkbox" id="chk-mii" onchange="onCheckboxChange('mii', this.checked)">
+        <div class="check-box">✓</div>
+        <span>Miiファイターを含める</span>
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" id="chk-dash" onchange="onCheckboxChange('dash', this.checked)">
+        <div class="check-box">✓</div>
+        <span>ダッシュファイターを含める</span>
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" id="chk-omakase" onchange="onCheckboxChange('omakase', this.checked)">
+        <div class="check-box">✓</div>
+        <span>おまかせを含める</span>
+      </label>
+    </div>
+
+    <div class="section-label">除くファイターを選ぶ（タップで除外）</div>
+    <input type="text" id="fighter-search" class="fighter-search-input" placeholder="名前で検索..." oninput="filterFighterGrid()">
+    <div class="exclude-grid" id="exclude-all-grid"></div>
+
+    <div class="modal-footer">
+      <button class="modal-cancel" onclick="closeModal()">キャンセル</button>
+      <button class="modal-save" onclick="saveSettings()">設定を保存</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/fighters.js"></script>
+<script src="js/bingo.js"></script>
+<script src="js/modal_team.js"></script>
+
+</body>
+</html>
