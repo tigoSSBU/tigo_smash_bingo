@@ -115,7 +115,18 @@
     </div>
 
     <div class="section-label">除くファイターを選ぶ（タップで除外）</div>
-    <input type="text" id="fighter-search" class="fighter-search-input" placeholder="名前で検索..." oninput="filterFighterGrid()">
+
+    <div class="random-exclude-row">
+      <span class="random-exclude-label">ランダムで除外:</span>
+      <input type="number" id="random-exclude-count" class="random-exclude-input" min="1" value="5">
+      <span class="random-exclude-unit">体</span>
+      <button type="button" class="random-exclude-btn" onclick="randomExcludeFighters()">抽選開始</button>
+    </div>
+
+    <div class="search-and-reset-row">
+      <input type="text" id="fighter-search" class="fighter-search-input" placeholder="名前で検索..." oninput="filterFighterGrid()">
+      <button type="button" class="reset-btn random-exclude-reset" onclick="resetExcludedFighters()">チェックをリセット</button>
+    </div>
     <div class="exclude-grid" id="exclude-all-grid"></div>
 
     <div class="modal-footer">
