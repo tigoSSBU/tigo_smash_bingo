@@ -1,3 +1,18 @@
 {
-  "players": []
+  "players": [
+    {
+      "key": "わの",
+      "name": "わの",
+      "bingo_count": 1,
+      "wins": 0,
+      "matches": 0
+    },
+    {
+      "key": "ちご",
+      "name": "tigo",
+      "bingo_count": 1,
+      "wins": 0,
+      "matches": 0
+    }
+  ]
 }
