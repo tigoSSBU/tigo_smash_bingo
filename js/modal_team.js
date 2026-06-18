@@ -3,6 +3,8 @@ function openModal() {
     document.getElementById('chk-dash').checked    = settings.includeDash;
     document.getElementById('chk-omakase').checked = settings.includeOmakase;
     document.getElementById('fighter-search').value = '';
+    document.getElementById('random-exclude-count').max = FIGHTERS.length;
+    lastRandomExcludeIds = [];
     buildAllFightersGrid();
     document.getElementById('modal-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -43,6 +45,42 @@ function buildAllFightersGrid(query) {
 
 function filterFighterGrid() {
     buildAllFightersGrid(document.getElementById('fighter-search').value);
+}
+
+let lastRandomExcludeIds = [];
+
+function randomExcludeFighters() {
+    const countInput = document.getElementById('random-exclude-count');
+    const n = parseInt(countInput.value, 10);
+    if (!n || n <= 0) return;
+
+    const searchInput = document.getElementById('fighter-search');
+    if (searchInput.value) {
+        searchInput.value = '';
+        buildAllFightersGrid();
+    }
+
+    if (lastRandomExcludeIds.length > 0) {
+        lastRandomExcludeIds.forEach(id => {
+            const btn = document.querySelector('#exclude-all-grid .exclude-btn[data-id="' + id + '"]');
+            if (btn) btn.classList.remove('excluded');
+        });
+        lastRandomExcludeIds = [];
+    }
+
+    const candidates = Array.from(document.querySelectorAll('#exclude-all-grid .exclude-btn:not(.excluded)'));
+    if (candidates.length === 0) return;
+
+    const pickCount = Math.min(n, candidates.length);
+    const picked = shuffle(candidates).slice(0, pickCount);
+    picked.forEach(btn => btn.classList.add('excluded'));
+    lastRandomExcludeIds = picked.map(btn => Number(btn.dataset.id));
+}
+
+function resetExcludedFighters() {
+    document.getElementById('fighter-search').value = '';
+    lastRandomExcludeIds = [];
+    buildAllFightersGrid();
 }
 
 function onCheckboxChange(type, checked) {
