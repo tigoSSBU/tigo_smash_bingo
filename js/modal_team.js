@@ -80,6 +80,19 @@ function randomExcludeFighters() {
 function resetExcludedFighters() {
     document.getElementById('fighter-search').value = '';
     lastRandomExcludeIds = [];
+
+    const includeMii     = document.getElementById('chk-mii').checked;
+    const includeDash    = document.getElementById('chk-dash').checked;
+    const includeOmakase = document.getElementById('chk-omakase').checked;
+
+    settings.excludedAll = FIGHTERS
+        .filter(f =>
+            (f.mii     && !includeMii) ||
+            (f.dash    && !includeDash) ||
+            (f.omakase && !includeOmakase)
+        )
+        .map(f => f.id);
+
     buildAllFightersGrid();
 }
 
