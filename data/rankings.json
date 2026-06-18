@@ -27,6 +27,20 @@
       "bingo_count": 1,
       "wins": 0,
       "matches": 1
+    },
+    {
+      "key": "はなうえ",
+      "name": "はなうえ",
+      "bingo_count": 1,
+      "wins": 0,
+      "matches": 0
+    },
+    {
+      "key": "まき",
+      "name": "まき",
+      "bingo_count": 1,
+      "wins": 0,
+      "matches": 0
     }
   ]
 }
