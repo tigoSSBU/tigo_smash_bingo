@@ -24,7 +24,7 @@
     {
       "key": "ざわす",
       "name": "ざわす",
-      "bingo_count": 1,
+      "bingo_count": 2,
       "wins": 0,
       "matches": 2
     },
@@ -87,7 +87,7 @@
     {
       "key": "にむ",
       "name": "にむ",
-      "bingo_count": 3,
+      "bingo_count": 4,
       "wins": 1,
       "matches": 1
     },
