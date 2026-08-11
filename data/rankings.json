@@ -3,9 +3,9 @@
     {
       "key": "わの",
       "name": "わの",
-      "bingo_count": 18,
-      "wins": 8,
-      "matches": 14
+      "bingo_count": 19,
+      "wins": 9,
+      "matches": 15
     },
     {
       "key": "ちご",
@@ -45,9 +45,9 @@
     {
       "key": "ななみ",
       "name": "ななみ",
-      "bingo_count": 11,
-      "wins": 5,
-      "matches": 8
+      "bingo_count": 12,
+      "wins": 6,
+      "matches": 9
     },
     {
       "key": "せいさく",
@@ -61,7 +61,7 @@
       "name": "かい",
       "bingo_count": 2,
       "wins": 0,
-      "matches": 2
+      "matches": 3
     },
     {
       "key": "たいしょー",
@@ -103,7 +103,7 @@
       "name": "りお",
       "bingo_count": 2,
       "wins": 0,
-      "matches": 1
+      "matches": 2
     }
   ]
 }
