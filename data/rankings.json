@@ -5,7 +5,7 @@
       "name": "わの",
       "bingo_count": 21,
       "wins": 10,
-      "matches": 17
+      "matches": 18
     },
     {
       "key": "ちご",
@@ -33,7 +33,7 @@
       "name": "はなうえ",
       "bingo_count": 18,
       "wins": 8,
-      "matches": 12
+      "matches": 13
     },
     {
       "key": "まき",
@@ -45,9 +45,9 @@
     {
       "key": "ななみ",
       "name": "ななみ",
-      "bingo_count": 17,
-      "wins": 8,
-      "matches": 11
+      "bingo_count": 18,
+      "wins": 9,
+      "matches": 12
     },
     {
       "key": "せいさく",
@@ -73,9 +73,9 @@
     {
       "key": "びーむ",
       "name": "びーむ",
-      "bingo_count": 6,
-      "wins": 2,
-      "matches": 6
+      "bingo_count": 7,
+      "wins": 3,
+      "matches": 7
     },
     {
       "key": "べっl",
