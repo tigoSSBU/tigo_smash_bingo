@@ -10,23 +10,23 @@
     {
       "key": "ちご",
       "name": "tigo",
-      "bingo_count": 9,
-      "wins": 4,
-      "matches": 5
+      "bingo_count": 10,
+      "wins": 5,
+      "matches": 6
     },
     {
       "key": "はとるふ",
       "name": "ハトルフ",
-      "bingo_count": 6,
-      "wins": 2,
-      "matches": 4
+      "bingo_count": 7,
+      "wins": 3,
+      "matches": 5
     },
     {
       "key": "ざわす",
       "name": "ざわす",
       "bingo_count": 4,
       "wins": 1,
-      "matches": 5
+      "matches": 6
     },
     {
       "key": "はなうえ",
@@ -89,7 +89,7 @@
       "name": "にむ",
       "bingo_count": 6,
       "wins": 2,
-      "matches": 4
+      "matches": 5
     },
     {
       "key": "なぎ",
