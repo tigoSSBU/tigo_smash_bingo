@@ -10,7 +10,7 @@
     {
       "key": "ちご",
       "name": "tigo",
-      "bingo_count": 10,
+      "bingo_count": 11,
       "wins": 5,
       "matches": 6
     },
@@ -118,6 +118,13 @@
       "bingo_count": 2,
       "wins": 1,
       "matches": 2
+    },
+    {
+      "key": "しろたんくれや",
+      "name": "しろたんくれや",
+      "bingo_count": 1,
+      "wins": 0,
+      "matches": 0
     }
   ]
 }
