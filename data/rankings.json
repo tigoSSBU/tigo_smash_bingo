@@ -3,23 +3,23 @@
     {
       "key": "わの",
       "name": "わの",
-      "bingo_count": 36,
-      "wins": 16,
-      "matches": 30
+      "bingo_count": 37,
+      "wins": 17,
+      "matches": 31
     },
     {
       "key": "ちご",
       "name": "tigo",
-      "bingo_count": 15,
-      "wins": 7,
-      "matches": 9
+      "bingo_count": 16,
+      "wins": 8,
+      "matches": 10
     },
     {
       "key": "はとるふ",
       "name": "ハトルフ",
       "bingo_count": 7,
       "wins": 3,
-      "matches": 8
+      "matches": 9
     },
     {
       "key": "ざわす",
@@ -47,7 +47,7 @@
       "name": "ななみ",
       "bingo_count": 21,
       "wins": 10,
-      "matches": 15
+      "matches": 16
     },
     {
       "key": "せいさく",
